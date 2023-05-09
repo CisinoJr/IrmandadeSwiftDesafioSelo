@@ -10,12 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "heart.fill")
+				.font(.system(size: 100))
                 .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+                .foregroundColor(.red)
+				.background(BackgroundView())
+				.overlay(OverlayTextView())
+				.id(1)
+			
+			
         }
         .padding()
+		.id(0)
     }
 }
 
